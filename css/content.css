@@ -150,7 +150,7 @@
 .section p:nth-child(1) {
   padding-right: 25px;
   color: #0d627a;
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
   text-align: justify;
 }
 .section p:nth-child(2) {
