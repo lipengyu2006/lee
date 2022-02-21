@@ -4,6 +4,7 @@
 .hidden {
   display: none !important;
 }
+
 /********************* prop up *********************/
 .frame {
   position: relative;
@@ -18,103 +19,47 @@
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-.roll:hover {
   overflow-y: auto;
-}
-
-.roll:hover::-webkit-scrollbar-thumb {
-  display: block;
-}
-.roll::-webkit-scrollbar {
-  width: 15px;
-  background-color: transparent;
-}
-.roll::-webkit-scrollbar-thumb {
-  background-color: rgba(95,98,116,.5);
-  background-clip: padding-box;
-  border: 4px solid transparent;
-  display: none;
-  border-radius: 8px;
 }
 /********************* prop up *********************/
 
 
 /********************* vertical nav *********************/
-.ver_menu,
-.verm_grp,
-.grp_title,
+.vm_section,
+.vm_grp,
+.vm_title,
+.vm_content,
+.vm_name,
 .item {
   display: flex;
-}
-.ver_menu, .verm_grp {
-  flex-direction: column;
-}
-.ver_menu {
-  font-size: 14px;
   color: #232323;
+  font-size: 16px;
 }
-
-.ver_menu .item,
-.ver_menu .grp_title {
-  flex-direction: row;
-  padding: 3px 0;
-}
-.ver_menu .grp_title {
-  font-weight: bold;
-  padding-left: 10px;
-}
-.verm_grp .item {
-  padding-left: 20px;
-}
-.ver_menu .item {
-  cursor: pointer;
-}
-.ver_menu .item:hover {
+.item:hover {
   background: #DDDDDD;
 }
-.vm_icon {
-  flex: 0 0 34px;
-  justify-content: center;
-  align-items: center;
-}
-.vm_name {
-  flex: 1;
-}
-.vm_content {
-  flex: 1 1 auto;
-  min-width: 0;
-  margin: 0 15px;
-}
-.vm_content > div:nth-child(2),
-.vm_content > div:nth-child(3) {
-  font-size: 12px;
-}
-.wth40 {
-  flex: 0 0 40px;
-}
-.mgt25 {
-  margin: 15px 0;
-}
-.vm_content > div,
-.ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  /*display: block !important;*/
-  /*min-width: 0;*/
-}
-.horiz_divider {
-  height: 1px;
-  margin: 20px;
+.item {
+  padding: 3px 0 3px 20px;
 }
 
-#chapter_body .ver_menu {
-  border-bottom: 1px solid #eee;
+.vm_title {
+  flex-direction: row;
+  font-weight: bold;
+  padding: 3px 0px 3px 10px;
 }
-#chapter_body .ver_menu .item {
-  padding: 10px 0;
+.vm_content,
+.vm_name {
+  flex: 1;
+  text-decoration: none;
+}
+.vm_section,
+.vm_content,
+.vm_grp {
+  flex-direction: column;
+}
+
+#chapter_body .vm_section {
+  border-top: 1px solid #eee;
 }
 /********************* vertical nav *********************/
 
@@ -150,7 +95,6 @@
 .section p:nth-child(1) {
   padding-right: 25px;
   color: #0d627a;
-  /*font-family: 'Open Sans', sans-serif;*/
   text-align: justify;
 }
 .section p:nth-child(2) {
@@ -170,6 +114,9 @@
   .section {
     flex-direction: column;
   }
+  .section p:nth-child(1) {
+    padding-right: 0;
+  }
 }
 /********************* paragraph *********************/
 
@@ -185,15 +132,3 @@
   text-align: center;
 }
 /********************* button *********************/
-
-/********************* border *********************/
-#top {
-  border-bottom: 2px solid #DDD;
-}
-#foot {
-  border-top: 2px solid #DDD;
-}
-#content_head {
-  border-bottom: 1px solid #EEE;
-}
-/********************* border *********************/
