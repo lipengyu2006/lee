@@ -1,0 +1,20 @@
+{
+  "book": {
+    "id": "the_story_of_mankind",
+    "name": "美国学生人类史",
+    "chapters": [
+      {
+        "id": "religious_warfare",
+        "no": "46",
+        "en": "RELIGIOUS WARFARE Religious Warfare",
+        "zh": "宗教战争"
+      },
+      {
+        "id": "the_english_revolution",
+        "no": "47",
+        "en": "THE ENGLISH REVOLUTION",
+        "zh": "英国革命"
+      }
+    ]
+  }
+}
